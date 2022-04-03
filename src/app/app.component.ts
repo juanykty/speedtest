@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   download() {
     var start = performance.now()
-    this.speedtest.Download('/assets/speedtest').subscribe(event => {
+    this.speedtest.Download('https://juanykty.github.io/speedtest/assets/speedtest').subscribe(event => {
       if (event.type == HttpEventType.Sent) {
         this.ping = Math.ceil(performance.now() - start)
       }
